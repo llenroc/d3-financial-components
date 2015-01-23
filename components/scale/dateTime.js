@@ -10,7 +10,7 @@
 
         if (!arguments.length) {
             adaptedScale = d3.time.scale();
-            discontinuityProvider = fc.scale.discontinuity.identity();
+            discontinuityProvider = fc.scale.discontinuity.identity;
         }
 
         function discontinuities() { return scale.discontinuityProvider.value; }

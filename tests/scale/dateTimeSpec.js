@@ -8,7 +8,7 @@
             var end = new Date(2015, 0, 15); // thursday
 
             var dateTime = fc.scale.dateTime()
-                .discontinuityProvider(fc.scale.discontinuity.skipWeekends())
+                .discontinuityProvider(fc.scale.discontinuity.skipWeekends)
                 .range([0, 100])
                 .domain([start, end]);
 
@@ -64,7 +64,7 @@
                 var start = new Date(2015, 0, 18, 12); // mid-day sunday
 
                 var dateTime = fc.scale.dateTime()
-                    .discontinuityProvider(fc.scale.discontinuity.skipWeekends())
+                    .discontinuityProvider(fc.scale.discontinuity.skipWeekends)
                     .domain([start, end]);
 
                 expect(dateTime.domain()[0]).toEqual(startOfWeek);
@@ -78,7 +78,7 @@
                 var end = new Date(2015, 0, 15); // thursday
 
                 var dateTime = fc.scale.dateTime()
-                    .discontinuityProvider(fc.scale.discontinuity.skipWeekends())
+                    .discontinuityProvider(fc.scale.discontinuity.skipWeekends)
                     .range([0, 100])
                     .domain([start, end]);
 
@@ -106,7 +106,7 @@
                 var end = new Date(2015, 0, 29); // thursday
 
                 var dateTime = fc.scale.dateTime()
-                    .discontinuityProvider(fc.scale.discontinuity.skipWeekends())
+                    .discontinuityProvider(fc.scale.discontinuity.skipWeekends)
                     .range([0, 20])
                     .domain([start, end]);
 

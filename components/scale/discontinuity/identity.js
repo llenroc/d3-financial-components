@@ -1,28 +1,21 @@
 (function(d3, fc) {
     'use strict';
 
-    fc.scale.discontinuity.identity = function() {
+    function noop(date) { return date; }
 
-        function getDistance(startDate, endDate) {
+    fc.scale.discontinuity.identity = {
+        getDistance: function(startDate, endDate) {
             if (arguments.length === 1) {
                 var domain = startDate;
                 startDate = domain[0];
                 endDate = domain[1];
             }
             return endDate.getTime() - startDate.getTime();
-        }
-
-        function applyOffset(startDate, ticks) {
+        },
+        applyOffset: function(startDate, ticks) {
             return new Date(startDate.getTime() + ticks);
-        }
-
-        function noop(date) { return date; }
-
-        return {
-            applyOffset: applyOffset,
-            getDistance: getDistance,
-            clampUp: noop,
-            clampDown: noop
-        };
+        },
+        clampUp: noop,
+        clampDown: noop
     };
 }(d3, fc));
