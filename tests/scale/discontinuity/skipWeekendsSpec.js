@@ -4,7 +4,7 @@
     describe('skipWeekends', function() {
 
         var millisPerDay = 24 * 3600 * 1000;
-        var skipWeekends = fc.scale.discontinuity.skipWeekends;
+        var skipWeekends = fc.scale.discontinuity.skipWeekends();
 
         describe('clampUp', function() {
 

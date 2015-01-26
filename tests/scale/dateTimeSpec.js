@@ -8,7 +8,7 @@
             var end = new Date(2015, 0, 15); // thursday
 
             var dateTime = fc.scale.dateTime()
-                .discontinuityProvider(fc.scale.discontinuity.skipWeekends)
+                .discontinuityProvider(fc.scale.discontinuity.skipWeekends())
                 .range([0, 100])
                 .domain([start, end]);
 
